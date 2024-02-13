@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>szia</title>
+
+</head>
+<body>
+    <p>
+        Ez egy post-os szia lesz.
+    </p>
+    <p>
+        Van itt egy a szám: {{ a }}.
+    </p>
+    <p>
+        Van itt egy b szám: {{ b }}.
+    </p>
+    <p>
+        Van itt egy c szám: {{ c }}
+    </p>
+    <p>
+        Itt egy üzenet: {{ uzenet }}
+    </p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <p>Szia! Add meg te is a neved!</p>
+        <label for="szoveg">titkosnev:</label>
+        <input id="szoveg" type="text" name="nev">
+        <input type="submit" value="Küld">
+        <input type="hidden" name="valtozonev" value="ertek">
+    </form>
+</body>
+</html>
